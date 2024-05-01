@@ -94,7 +94,8 @@ with gr.Blocks() as app:
     submit_button.click(
         fn=gen_voice,
         inputs=[text_input, speaker_dropdown, speed_slider, language_dropdown],
-        outputs=audio_output
+        outputs=audio_output,
+        api_name="gen_voice"
     )
 
 if __name__ == "__main__":
